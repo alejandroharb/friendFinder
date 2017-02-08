@@ -17,7 +17,8 @@
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!--Materialize Javascript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
+<!-- front-end javascript -->
+<script type="text/javascript" src="assets/js/app.js"></script>
 </head>
 <body>
   <nav>
@@ -31,14 +32,148 @@
   </nav>
   <main>
     <div class="container">
-      <div class="col s12">
-        <h1>Personality Assessment</h1>
-          <ul id="surveyQuestions">
-          </ul>
+      <div class="row">
+        <div class="col s12">
+          <h1>Personality Assessment</h1>
+        </div>
       </div>
+      <form action="post" id="survey" class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Name" id="name" type="text" class="validate">
+            <label for="first_name">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="link" id="img_link" type="text" class="validate">
+            <label for="img_link">Link to Profile Image</label>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col s12">
+              <h2>Question 1</h2>
+              <h3>You adore chocolate.</h3>
+            </div>
+            <div class="input-field col s4">
+              <select form='survey'>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1 (Strongly Disagree)</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5 (Strongly Agree!)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <h2>Question 2</h2>
+              <h3>You like spending time out, exploring and discovering.</h3>
+            </div>
+            <div class="input-field col s4">
+              <select form='survey'>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1 (Strongly Disagree)</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5 (Strongly Agree!)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <h2>Question 3</h2>
+              <h3>You love to read.</h3>
+            </div>
+            <div class="input-field col s4">
+              <select form='survey'>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1 (Strongly Disagree)</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5 (Strongly Agree!)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <h2>Question 4</h2>
+              <h3>You like Star Wars.</h3>
+            </div>
+            <div class="input-field col s4">
+              <select form='survey'>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1 (Strongly Disagree)</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5 (Strongly Agree!)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <h2>Question 5</h2>
+              <h3>You like bein in large crowds and often being in the center of conversations.</h3>
+            </div>
+            <div class="input-field col s4">
+              <select form='survey'>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1 (Strongly Disagree)</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5 (Strongly Agree!)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <h2>Question 6</h2>
+              <h3>You're comfortable sharing your points of views and beliefs, and can debate ideas without confrontation.</h3>
+            </div>
+            <div class="input-field col s4">
+              <select form='survey'>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1 (Strongly Disagree)</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5 (Strongly Agree!)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <h2>Question 7</h2>
+              <h3>In class, you keep your questions to yourself because you'll figure out the answer on your own later.</h3>
+            </div>
+            <div class="input-field col s4">
+              <select form='survey'>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1 (Strongly Disagree)</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5 (Strongly Agree!)</option>
+              </select>
+            </div>
+          </div>
+        <input class="btn green" type="submit" name="">
+      </form>
     </div>
   </main>
-<!-- front-end javascript -->
-<script type="text/javascript" src="assets/js/app.js"></script>
+  <footer class="page-footer green">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p class="center-align">Beta: Created by Alejandro Harb</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

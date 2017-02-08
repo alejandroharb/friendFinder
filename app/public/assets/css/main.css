@@ -16,3 +16,14 @@ body {
 h1 {
     text-align: center;
 }
+h2 {
+	font-size:28px;
+	font-weight:500;
+}
+h3 {
+	font-size: 20px;
+}
+
+footer p {
+	color:#FAFAFA;
+}
