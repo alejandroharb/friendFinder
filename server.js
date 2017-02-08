@@ -7,7 +7,7 @@ PORT = 3000;
 var app = express();
 
 //do this! to have a go-to root directory for all static files (images, pdfs, front-end js, etc)
-app.use(express.static(path.join(__dirname + "/public")));
+app.use(express.static(__dirname + "/app/public"));
 
 //==========express app to handle data parsing=============
 app.use(bodyParser.json());

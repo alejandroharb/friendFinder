@@ -15,8 +15,8 @@ var app = express();
 module.exports = function(app) {
     //=====api routes=====
 
-    app.get('/api/ questions', function(req, res) {
-        res.send(questions) //variable of object with all people in data
+    app.get('/api/questions', function(req, res) {
+        res.json(questions) //variable of object with all people in data
     })
 
     app.post('/api/friends', function(req, res) {

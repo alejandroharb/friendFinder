@@ -1,5 +1,5 @@
 body {
-    background-image: url('wallpaper-img');
+    background-image: url('../img/light_grey.png');
 }
 .card .card-image .card-title{
     bottom: 30px;
@@ -11,4 +11,8 @@ body {
     max-width: 640px;
     position: relative;
     margin: 80px auto;
+}
+
+h1 {
+    text-align: center;
 }
