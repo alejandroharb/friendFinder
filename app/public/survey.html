@@ -30,33 +30,38 @@
       </ul>
     </div>
   </nav>
+  <!-- ============MAIN CONTENT============= -->
   <main>
-    <div class="container">
+    <div class="container survey-content">
       <div class="row">
         <div class="col s12">
           <h1>Personality Assessment</h1>
         </div>
       </div>
-      <form action="post" id="survey" class="col s12">
+      <!-- ======================FORM==================== -->
+      <form id="survey" class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <input placeholder="Name" id="name" type="text" class="validate">
+            <!-- Name input  -->
+            <input placeholder="Name" id="name" type="text" class="validate" required>
             <label for="first_name">Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input placeholder="link" id="img_link" type="text" class="validate">
+            <!-- Image link input -->
+            <input placeholder="link" id="img_link" type="text" class="validate" required>
             <label for="img_link">Link to Profile Image</label>
           </div>
         </div>
+          <!-- ================Form questions=============== -->
           <div class="row">
             <div class="col s12">
               <h2>Question 1</h2>
               <h3>You adore chocolate.</h3>
             </div>
             <div class="input-field col s4">
-              <select form='survey'>
+              <select form='survey' required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Option 1 (Strongly Disagree)</option>
                 <option value="2">Option 2</option>
@@ -72,7 +77,7 @@
               <h3>You like spending time out, exploring and discovering.</h3>
             </div>
             <div class="input-field col s4">
-              <select form='survey'>
+              <select form='survey' required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Option 1 (Strongly Disagree)</option>
                 <option value="2">Option 2</option>
@@ -88,7 +93,7 @@
               <h3>You love to read.</h3>
             </div>
             <div class="input-field col s4">
-              <select form='survey'>
+              <select form='survey' required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Option 1 (Strongly Disagree)</option>
                 <option value="2">Option 2</option>
@@ -99,7 +104,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col s12">
+            <div class="col s12" required>
               <h2>Question 4</h2>
               <h3>You like Star Wars.</h3>
             </div>
@@ -120,7 +125,7 @@
               <h3>You like bein in large crowds and often being in the center of conversations.</h3>
             </div>
             <div class="input-field col s4">
-              <select form='survey'>
+              <select form='survey' required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Option 1 (Strongly Disagree)</option>
                 <option value="2">Option 2</option>
@@ -136,7 +141,7 @@
               <h3>You're comfortable sharing your points of views and beliefs, and can debate ideas without confrontation.</h3>
             </div>
             <div class="input-field col s4">
-              <select form='survey'>
+              <select form='survey' required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Option 1 (Strongly Disagree)</option>
                 <option value="2">Option 2</option>
@@ -152,7 +157,7 @@
               <h3>In class, you keep your questions to yourself because you'll figure out the answer on your own later.</h3>
             </div>
             <div class="input-field col s4">
-              <select form='survey'>
+              <select form='survey' required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Option 1 (Strongly Disagree)</option>
                 <option value="2">Option 2</option>
@@ -162,10 +167,12 @@
               </select>
             </div>
           </div>
-        <input class="btn green" type="submit" name="">
+          <!-- form submit button -->
+        <input class="btn green" type="submit" id="surveySubmit">
       </form>
     </div>
   </main>
+  <!-- ==========FOOTER============= -->
   <footer class="page-footer green">
     <div class="container">
       <div class="row">

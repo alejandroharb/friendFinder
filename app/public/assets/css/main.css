@@ -7,10 +7,19 @@ body {
     font-weight:400;
 }
 
+main {
+	margin-top:45px;
+}
+
 .card {
     max-width: 640px;
     position: relative;
     margin: 80px auto;
+}
+
+.survey-content {
+	padding: 15px 30px;
+	background-color: #FAFAFA;
 }
 
 h1 {
