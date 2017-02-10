@@ -64,7 +64,11 @@ module.exports = function(app) {
 
     app.get('/api/questions', function(req, res) {
         res.json(questions);
-    })
+    });
+
+    app.get('/api/friends', function(req, res) {
+        res.send(friendsData);
+    });
 
     app.post('/api/friends', function(req, res) {
         var data = req.body;
