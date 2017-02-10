@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 //==========server port, express APP declared==========
-PORT = 3000;
+PORT = process.env.PORT || 3000;
 var app = express();
 
 //do this! to have a go-to root directory for all static files (images, pdfs, front-end js, etc)
