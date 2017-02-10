@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(document).ready(function(event) {
     $('select').material_select();
     $('#textarea1').val('New Text');
     $('#textarea1').trigger('autoresize');
@@ -20,14 +20,18 @@ $(document).ready(function() {
                 //pushes to array
                 userAnswerArr.push(parseInt(a))
            }
-        }    
-       $.ajax({url:'/api/friends', method: 'POST'}).done(function(response) {
-            response.name = name,
-            response.link = link,
-            response.arr = userAnswerArr
-        })
-       //prevents page reload upon submitting form
-       return false; 
+        }
+        var dataObj = {
+            name: name,
+            link: link,
+            answers: userAnswerArr
+        };
+       $.post('/api/friends', dataObj, function(data) {
+            console.log(data);
+            console.log("got data back")
+        });
+        //prevents page reload upon submitting form
+        return false;
     })
-    
+
 })
