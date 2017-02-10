@@ -46,7 +46,7 @@ function findMatch(arr) {
     return matches;
 }
 
-//==data==
+//======Survey Questions Data==
     var questions = [
         'You adore chocolate.',
         'You like spending time out, exploring and discovering.',
@@ -56,6 +56,9 @@ function findMatch(arr) {
         'You\'re comfortable sharing your points of views and beliefs, and can debate ideas without confrontation.',
         'In class, you keep your questions to yourself because you\'ll figure out the answer on your own later.'
     ];
+
+
+
 module.exports = function(app) {
     //=====api routes=====
 

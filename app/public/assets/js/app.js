@@ -30,14 +30,15 @@ $(document).ready(function(event) {
        $.post('/api/friends', dataObj, function(data) {
             console.log(data)
             for (var i = 0; i < data.length; i++) {
-                var newDiv = $('<div>').attr('class','col s6');
-                var newHeader = $('<h4>').html(data[i].name);
+                var newDiv = $('<div>').attr('class','col s12');
+                var newHeader = $('<h5>').html(data[i].name);
+                var description = $('<p>').html(data[i].description);
                 var newImg = $('<img class="responsive-img" src ="' + data[i].link + '">');
-                newDiv.append(newImg).append(newHeader);
+                newDiv.append(newImg).append(newHeader).append(description);
                 $('#matches').prepend(newDiv);
             }
             $('#modal1').modal('open');
-          
+
         });
         //prevents page reload upon submitting form
         return false;

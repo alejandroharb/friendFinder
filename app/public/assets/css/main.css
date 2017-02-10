@@ -32,6 +32,15 @@ h2 {
 h3 {
 	font-size: 20px;
 }
+h4{
+    font-size: 40px;
+    font-weight: 700;
+}
+h5 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
 
 footer p {
 	color:#FAFAFA;
@@ -41,5 +50,11 @@ footer p {
 	float: left;
 	max-width: 200px;
 	border-radius:50%;
-	background-color: blue;
+	margin: 5px 30px;
+}
+.modal p{
+    font-size:17px;
+    display: block;
+    position:relative;
+    text-align: center;
 }
