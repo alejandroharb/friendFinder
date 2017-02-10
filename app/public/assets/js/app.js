@@ -1,5 +1,6 @@
 
 $(document).ready(function(event) {
+    $('.modal').modal();
     $('select').material_select();
     $('#textarea1').val('New Text');
     $('#textarea1').trigger('autoresize');
@@ -27,8 +28,16 @@ $(document).ready(function(event) {
             answers: userAnswerArr
         };
        $.post('/api/friends', dataObj, function(data) {
-            console.log(data);
-            console.log("got data back")
+            console.log(data)
+            for (var i = 0; i < data.length; i++) {
+                var newDiv = $('<div>').attr('class','col s6');
+                var newHeader = $('<h4>').html(data[i].name);
+                var newImg = $('<img class="responsive-img" src ="' + data[i].link + '">');
+                newDiv.append(newImg).append(newHeader);
+                $('#matches').prepend(newDiv);
+            }
+            $('#modal1').modal('open');
+          
         });
         //prevents page reload upon submitting form
         return false;

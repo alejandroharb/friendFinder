@@ -4,39 +4,48 @@ var app = express();
 
 var friendsData = require('../data/friends.js');
 
-function compareMatch(arr) {
+function findMatch(arr) {
     var diffArray = [];
     var matches = [];
+    //---------------------Calculate sum of differences----------------------------
+    //loop through friends data, at each array for person, get differences and sum them up
     for(let i = 0; i < friendsData.length; i++) {
         var comparisonArray = friendsData[i].answers;
+        //reduces whole array into sum of differences
         var diff = comparisonArray.reduce(function(accum, elem, index) {
             return accum + Math.abs(elem - arr[index]);
-        });
+        },0);
+        //push differences and sum value to diffArray
         diffArray.push(diff);
     }
-    console.log("diffArray");
-    console.log(diffArray);
+    //-----------------------Find smallest difference--------------------------
+    //loop through diffArray (containing difference index comparing all friend with user) and check which is smallest
     for(let i = 0; i < diffArray.length; i++) {
+        //temporary array holding smallest value
         var tempVar = diffArray[i];
+        //loop through diffArray again to compare each value for smallest
         for( let k = 0; k < diffArray.length; k++) {
+            //checkVar is starting variable at beginning of array to be checked with tempVar
             var checkVar = diffArray[k];
+            //check if smaller
             if(checkVar < tempVar) {
                 tempVar = checkVar;
             } else {continue;}
         }
-        console.log("tempVar: " + tempVar)
     }
+    //-----------------------Push matches to matches Array--------------------------
+    //for smallest difference variable (tempVar) found, its index coincides with index of matched friend
+    //loop through diffArray to check at which index our small variables are,
+    //push friend object that was a match into array of matches (in case there were more than one)
     for(let i = 0; i < diffArray.length; i++) {
         if(tempVar === diffArray[i]) {
             matches.push(friendsData[i]);
         }
     }
 
-    console.log("_____matches:_____")
-    console.log(matches)
     return matches;
 }
-compareMatch([5,1,5,1,5,3,4]);
+
 //==data==
     var questions = [
         'You adore chocolate.',
@@ -51,13 +60,17 @@ module.exports = function(app) {
     //=====api routes=====
 
     app.get('/api/questions', function(req, res) {
-        res.json(questions)
+        res.json(questions);
     })
 
     app.post('/api/friends', function(req, res) {
         var data = req.body;
+        //find friend matches for user
+        var matches = findMatch(data.answers);
+        //add user's info to database (push into array of objects)
         friendsData.push(data);
-        res.send(friendsData);
+        //send back to front-end the array of matches
+        res.send(matches);
     })
 
 }

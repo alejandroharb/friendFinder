@@ -36,3 +36,10 @@ h3 {
 footer p {
 	color:#FAFAFA;
 }
+
+.modal img{
+	float: left;
+	max-width: 200px;
+	border-radius:50%;
+	background-color: blue;
+}
